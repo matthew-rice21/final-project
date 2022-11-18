@@ -1,1 +1,274 @@
+var currentScene = 0;
 
+//TYLER BITMOJI
+var drawTyler = function(tyX,tyY,tyH){
+
+//eyes
+
+    noStroke();
+fill(140, 94, 94);
+
+var drawHead = function(tylerX,tylerY,tylerH){
+ellipse(tylerX + tylerH/116 * 118,tylerY  + tylerH/116 * 89, + tylerH/116 * 23, + tylerH/116 * 48);//hairBehind
+ellipse(tylerX + tylerH/116 *  + 90,tylerY + tylerH/116 * 36, + tylerH/116 * 54, + tylerH/116 * 37);
+ellipse(tylerX + tylerH/116 *  + 109,tylerY + tylerH/116 * 104, + tylerH/116 * 23, + tylerH/116 * 48);
+ellipse(tylerX + tylerH/116 *  + 33,tylerY + tylerH/116 * 104, + tylerH/116 * 23, + tylerH/116 * 48);
+ellipse(tylerX + tylerH/116 *  + 22,tylerY + tylerH/116 * 90, + tylerH/116 * 17, + tylerH/116 * 50);
+
+fill(240, 213, 187);//head
+ellipse(tylerX + tylerH/116 * 71,tylerY + tylerH/116 * 88, + tylerH/116 * 94, + tylerH/116 * 116);
+stroke(0,0,0);
+ellipse(tylerX + tylerH/116 * 89,tylerY + tylerH/116 * 81, + tylerH/116 * 29, + tylerH/116 * 28);
+ellipse(tylerX + tylerH/116 * 53,tylerY + tylerH/116 * 81, + tylerH/116 * 29, + tylerH/116 * 28);
+line(tylerX + tylerH/116 * 124,tylerY + tylerH/116 * 75,tylerX + tylerH/116 *  + 24,tylerY + tylerH/116 * 75);
+noStroke();
+};
+var drawBody = function(tylerX,tylerY,tylerH){
+fill(240, 213, 187);
+rect(tylerX + tylerH/116 * 50,tylerY + tylerH/116 * 132, + tylerH/116 * 41, + tylerH/116 * 30);//body
+rect(tylerX + tylerH/116 * 3,tylerY + tylerH/116 * 162, + tylerH/116 * 136, + tylerH/116 * 98);
+fill(86, 168, 168);
+rect(tylerX + tylerH/116,tylerY + tylerH/116 * 163, + tylerH/116 * 136, + tylerH/116 * 28);
+rect(tylerX  + tylerH/116 * 20,tylerY + tylerH/116 * 165, + tylerH/128 * 109, + tylerH/116 * 99);
+fill(140, 94, 94);
+ellipse(tylerX  + tylerH/116 * 71,tylerY + tylerH/116 * 29, + tylerH/116 * 54, + tylerH/116 * 37);
+};
+var hairEyesFace = function(tylerX,tylerY,tylerH){
+//hairTop2
+ellipse(tylerX  + tylerH/116 * 95,tylerY + tylerH/116 * 30,tylerH/116 * 20,tylerH/116 * 26);
+ellipse(tylerX  + tylerH/116 * 33,tylerY + tylerH/116 * 48, + tylerH/116 * 31, + tylerH/116 * 32);
+ellipse(tylerX  + tylerH/116 * 119,tylerY + tylerH/116 * 68, + tylerH/116 * 24, + tylerH/116 * 37);
+ellipse(tylerX  + tylerH/116 * 46,tylerY + tylerH/116 * 31, + tylerH/116 * 31, + tylerH/116 * 32);
+ellipse(tylerX  + tylerH/116 * 113,tylerY + tylerH/116 * 45, + tylerH/116 * 31, + tylerH/116 * 32);
+ellipse(tylerX  + tylerH/116 * 22,tylerY + tylerH/116 * 73, + tylerH/116 * 22, + tylerH/116 * 33);
+
+//eyes
+fill(255, 255, 255);
+ellipse(tylerX  + tylerH/116 * 90,tylerY + tylerH/116 * 80, + tylerH/116 * 23, + tylerH/116 * 13);
+ellipse(tylerX  + tylerH/116 * 54,tylerY + tylerH/116 * 80, + tylerH/116 * 24, + tylerH/116 * 13);
+fill(0, 0, 0);
+ellipse(tylerX  + tylerH/116 * 90,tylerY + tylerH/116 * 80, + tylerH/116 * 6, + tylerH/116 * 7);
+ellipse(tylerX  + tylerH/116 * 54,tylerY + tylerH/116 * 80, + tylerH/116 * 6, + tylerH/116 * 7);
+fill(240, 213, 187);
+ellipse(tylerX  + tylerH/116 * 89,tylerY + tylerH/116 * 75, + tylerH/116 * 37, + tylerH/116 * 6);
+ellipse(tylerX  + tylerH/116 * 54,tylerY + tylerH/116 * 75, + tylerH/116 * 31, + tylerH/116 * 6);
+
+//faceLines
+stroke(0, 0, 0);
+line(tylerX  + tylerH/116 * 84,tylerY + tylerH/116 * 145,tylerX  + tylerH/116 * 105,tylerY + tylerH/116 * 115);
+line(tylerX  + tylerH/116 * 59,tylerY + tylerH/116 * 144,tylerX  + tylerH/116 * 37,tylerY + tylerH/116 * 115);
+line(tylerX  + tylerH/116 * 83,tylerY + tylerH/116 * 123,tylerX  + tylerH/116 * 57,tylerY + tylerH/116 * 123);
+line(tylerX  + tylerH/116 * 91,tylerY + tylerH/116 * 120,tylerX  + tylerH/116 * 82,tylerY + tylerH/116 * 124);
+
+line(tylerX  + tylerH/116 * 100,tylerY + tylerH/116 * 65,tylerX  + tylerH/116 * 79,tylerY + tylerH/116 * 65);
+line(tylerX  + tylerH/116 * 65,tylerY + tylerH/116 * 64,tylerX  + tylerH/116 * 42,tylerY + tylerH/116 * 64);
+line(tylerX  + tylerH/116 * 100,tylerY + tylerH/116 * 65,tylerX  + tylerH/116 * 104,tylerY + tylerH/116 *  70);
+
+line(tylerX  + tylerH/116 * 63,tylerY + tylerH/116 * 99,tylerX  + tylerH/116 * 68,tylerY + tylerH/116 *  68);
+line(tylerX  + tylerH/116 * 67,tylerY + tylerH/116 * 104,tylerX  + tylerH/116 * 81,tylerY + tylerH/116 *  105);
+line(tylerX  + tylerH/116 * 100,tylerY + tylerH/116 * 65,tylerX  + tylerH/116 * 104,tylerY + tylerH/116 *  70);
+};
+
+drawHead(tyX,tyY,tyH);
+drawBody(tyX,tyY,tyH);
+hairEyesFace(tyX,tyY,tyH);
+}; 
+
+
+//Matt Bitmoji
+var bitmojiX = 0;
+var bitmojiY = 0;
+var bitmojiHeight = 150;
+
+var drawBitmoji = function(bitmojiX, bitmojiY, bitmojiHeight){
+   //face
+fill(245, 225, 188);
+ellipse(bitmojiX+75*bitmojiHeight/150,bitmojiY+75*bitmojiHeight/150,82*bitmojiHeight/150,100*bitmojiHeight/150);
+
+//left eye
+fill(255, 255, 255);
+ellipse(bitmojiX+58*bitmojiHeight/150,bitmojiY+67*bitmojiHeight/150,15*bitmojiHeight/150,15*bitmojiHeight/150);
+
+//right eye
+fill(255, 255, 255);
+ellipse(bitmojiX+91*bitmojiHeight/150,bitmojiY+67*bitmojiHeight/150,15*bitmojiHeight/150,15*bitmojiHeight/150);
+
+//left pupil
+fill(102, 60, 30);
+ellipse(bitmojiX+58*bitmojiHeight/150,bitmojiY+67*bitmojiHeight/150,7*bitmojiHeight/150,7*bitmojiHeight/150);
+fill(26, 23, 23);
+ellipse(bitmojiX+58*bitmojiHeight/150,bitmojiY+67*bitmojiHeight/150,3*bitmojiHeight/150,3*bitmojiHeight/150);
+
+//left pupil
+fill(102, 60, 30);
+ellipse(bitmojiX+91*bitmojiHeight/150,bitmojiY+67*bitmojiHeight/150,7*bitmojiHeight/150,7*bitmojiHeight/150);
+ellipse(bitmojiX+91*bitmojiHeight/150,bitmojiY+67*bitmojiHeight/150,3*bitmojiHeight/150,3*bitmojiHeight/150);
+
+
+//hair
+fill(64, 37, 10);
+arc(bitmojiX+72*bitmojiHeight/150,bitmojiY+32*bitmojiHeight/150,84*bitmojiHeight/150,41*bitmojiHeight/150,51,155);
+arc(bitmojiX+72*bitmojiHeight/150,bitmojiY+24*bitmojiHeight/150,84*bitmojiHeight/150,41*bitmojiHeight/150,55,166);
+arc(bitmojiX+72*bitmojiHeight/150,bitmojiY+29*bitmojiHeight/150,84*bitmojiHeight/150,41*bitmojiHeight/150,52,162);
+rect(bitmojiX+102*bitmojiHeight/150,bitmojiY+48*bitmojiHeight/150,11*bitmojiHeight/150,24*bitmojiHeight/150);
+ellipse(bitmojiX+79*bitmojiHeight/150,bitmojiY+38*bitmojiHeight/150,43*bitmojiHeight/150,24*bitmojiHeight/150);
+ellipse(bitmojiX+91*bitmojiHeight/150,bitmojiY+45*bitmojiHeight/150,35*bitmojiHeight/150,15*bitmojiHeight/150);
+
+
+//party hat
+fill(199, 51, 14);
+triangle(bitmojiX+118*bitmojiHeight/150,bitmojiY+12*bitmojiHeight/150,bitmojiX+54*bitmojiHeight/150,bitmojiY+24*bitmojiHeight/150,bitmojiX+113*bitmojiHeight/150,bitmojiY+48*bitmojiHeight/150);
+fill(120, 235, 91);
+ellipse(bitmojiX+115*bitmojiHeight/150,bitmojiY+13*bitmojiHeight/150,20*bitmojiHeight/150,20*bitmojiHeight/150);
+
+
+//glasses
+fill(33, 30, 30);
+line(bitmojiX+46*bitmojiHeight/150,bitmojiY+77*bitmojiHeight/150,bitmojiX+46*bitmojiHeight/150,bitmojiY+56*bitmojiHeight/150);//left left
+line(bitmojiX+70*bitmojiHeight/150,bitmojiY+57*bitmojiHeight/150,bitmojiX+46*bitmojiHeight/150,bitmojiY+56*bitmojiHeight/150);//left top
+line(bitmojiX+70*bitmojiHeight/150,bitmojiY+57*bitmojiHeight/150,bitmojiX+70*bitmojiHeight/150,bitmojiY+78*bitmojiHeight/150);//left right
+line(bitmojiX+71*bitmojiHeight/150,bitmojiY+79*bitmojiHeight/150,bitmojiX+47*bitmojiHeight/150,bitmojiY+78*bitmojiHeight/150);//left bottom
+rect(bitmojiX+69*bitmojiHeight/150,bitmojiY+64*bitmojiHeight/150,9*bitmojiHeight/150,3*bitmojiHeight/150);//bridge
+line(bitmojiX+80*bitmojiHeight/150,bitmojiY+79*bitmojiHeight/150,bitmojiX+81*bitmojiHeight/150,bitmojiY+57*bitmojiHeight/150);//right left
+line(bitmojiX+82*bitmojiHeight/150,bitmojiY+57*bitmojiHeight/150,bitmojiX+102*bitmojiHeight/150,bitmojiY+57*bitmojiHeight/150);//right top
+line(bitmojiX+103*bitmojiHeight/150,bitmojiY+58*bitmojiHeight/150,bitmojiX+104*bitmojiHeight/150,bitmojiY+80*bitmojiHeight/150);//right right
+line(bitmojiX+103*bitmojiHeight/150,bitmojiY+79*bitmojiHeight/150,bitmojiX+81*bitmojiHeight/150,bitmojiY+78*bitmojiHeight/150);//right bottom
+rect(bitmojiX+44*bitmojiHeight/150,bitmojiY+63*bitmojiHeight/150,-10*bitmojiHeight/150,3*bitmojiHeight/150);//ear piece
+
+//nose
+fill(245, 225, 188);
+arc(bitmojiX+75*bitmojiHeight/150,bitmojiY+74*bitmojiHeight/150,10*bitmojiHeight/150,20*bitmojiHeight/150,-11,201);
+
+//left ear
+fill(245, 225, 188);
+ellipse(bitmojiX+32*bitmojiHeight/150,bitmojiY+68*bitmojiHeight/150,8*bitmojiHeight/150,15*bitmojiHeight/150);
+
+//right ear
+fill(245, 225, 188);
+ellipse(bitmojiX+118*bitmojiHeight/150,bitmojiY+68*bitmojiHeight/150,8*bitmojiHeight/150,15*bitmojiHeight/150);
+
+//mouth
+stroke(145, 42, 42);
+fill(145, 42, 42);
+arc(bitmojiX+74*bitmojiHeight/150,bitmojiY+99*bitmojiHeight/150,36*bitmojiHeight/150,27*bitmojiHeight/150,2,175);
+
+//neck
+stroke(43, 40, 40);
+fill(245, 225, 188);
+rect(bitmojiX+65*bitmojiHeight/150,bitmojiY+123*bitmojiHeight/150,20*bitmojiHeight/150,15*bitmojiHeight/150);
+
+//shirt
+fill(18, 17, 17);
+quad(bitmojiX+115*bitmojiHeight/150,bitmojiY+139*bitmojiHeight/150,bitmojiX+41*bitmojiHeight/150,bitmojiY+139*bitmojiHeight/150,bitmojiX+20*bitmojiHeight/150,bitmojiY+194*bitmojiHeight/150,bitmojiX+131*bitmojiHeight/150,bitmojiY+197*bitmojiHeight/150);
+
+//initials
+
+fill(245, 245, 245);//M
+rect(bitmojiX+44*bitmojiHeight/150,bitmojiY+154*bitmojiHeight/150,6*bitmojiHeight/150,21*bitmojiHeight/150);//M
+rect(bitmojiX+43*bitmojiHeight/150,bitmojiY+150*bitmojiHeight/150,35*bitmojiHeight/150,5*bitmojiHeight/150);//M
+rect(bitmojiX+58*bitmojiHeight/150,bitmojiY+151*bitmojiHeight/150,6*bitmojiHeight/150,25*bitmojiHeight/150);//M
+rect(bitmojiX+71*bitmojiHeight/150,bitmojiY+154*bitmojiHeight/150,6*bitmojiHeight/150,21*bitmojiHeight/150);//M
+rect(bitmojiX+89*bitmojiHeight/150,bitmojiY+149*bitmojiHeight/150,7*bitmojiHeight/150,28*bitmojiHeight/150);//M
+arc(bitmojiX+96*bitmojiHeight/150,bitmojiY+159*bitmojiHeight/150,21*bitmojiHeight/150,20*bitmojiHeight/150,-98,93);
+fill(28, 26, 26);
+ellipse(bitmojiX+97*bitmojiHeight/150,bitmojiY+160*bitmojiHeight/150,7*bitmojiHeight/150,10*bitmojiHeight/150);
+fill(255, 255, 255);
+rect(bitmojiX+103*bitmojiHeight/150,bitmojiY+162*bitmojiHeight/150,6*bitmojiHeight/150,17*bitmojiHeight/150); 
+
+};
+
+//KHAN BUTTON CLASS
+var Button = function(config) {
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 193;
+    this.height = config.height || 50;
+    this.label = config.label || "Click";
+    this.onClick = config.onClick || function() {};
+};
+
+Button.prototype.draw = function() {
+    fill(255, 111, 0);
+    rect(this.x, this.y, this.width, this.height, 5);
+    fill(0, 0, 0);
+    textSize(32);
+    textAlign(LEFT, TOP);
+    text(this.label, this.x+19, this.y+this.height/9);
+};
+
+Button.prototype.isMouseInside = function() {
+    return mouseX > this.x &&
+           mouseX < (this.x + this.width) &&
+           mouseY > this.y &&
+           mouseY < (this.y + this.height);
+};
+
+Button.prototype.handleMouseClick = function() {
+    if (this.isMouseInside()) {
+        this.onClick();
+    }
+};
+
+var startButton = new Button({
+    x: 129,
+    y: 264,
+    label:"Next!",
+    onClick: function() {
+        currentScene = 1;
+    }
+});
+
+
+var scene1Button = new Button({
+    x: 109,
+    y: 310,
+    label:"Start Game",
+    onClick: function() {
+        currentScene = 2;
+    }
+});
+
+
+mouseClicked = function() {
+    startButton.handleMouseClick();
+    scene1Button.handleMouseClick();
+    
+};
+
+
+//Scene1 (instructions)
+var currentScene1 = function(){
+ background(56, 56, 56);
+ textSize(50);
+ fill(255, 43, 43);
+ text("Instructions",75,39);
+ drawTyler(29,295,37);
+ drawBitmoji(323,299,67);
+ scene1Button.draw();
+};
+
+//Scene2 (first screen of game)
+var currentScene2 = function(){
+  background(0,0,0);
+};
+ 
+//SPLASH FUNCTION
+var splash = function(){
+    background(56, 56, 56);
+    textSize(40);
+    fill(255, 43, 43);
+    text("Make Your Own Car!",18,28);
+    textSize(20);
+    text("By Matthew Rice and Tyler Palmer",50,355);
+    drawBitmoji(234,91,100); //Matt
+    drawTyler(65,91,57);  //tyler
+    startButton.draw();
+};
+
+draw = function() {
+  if(currentScene === 0)
+{splash();}   
+else
+{currentScene1();}
+
+};
