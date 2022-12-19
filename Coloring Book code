@@ -706,9 +706,9 @@ fill(255, 255, 255);
 textSize(50);
 text("Coloring Book",45,17);
 textSize(18);
-text(creators[0],58,80);
+text(creators[0],58,80); //uses an array
 text("and",178,80);
-text(creators[1],220,80);
+text(creators[1],220,80); //uses an array
 drawBitmoji(15,261,110);
 drawTyler(290,251,71);
 fill(106, 0, 212); //color of right crayon(purple)
